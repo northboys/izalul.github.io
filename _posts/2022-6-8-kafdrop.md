@@ -7,6 +7,14 @@ When it comes to Kafka topic viewers and web UIs, the go-to open-source tool is 
 
 Kafdrop is an Apache 2.0 licensed project, like Apache Kafka itself. So it’s won’t cost you a penny. If you haven’t used it yet, you probably ought to. So let’s take a deeper look.
 
+What Can It Do?
+- View Kafka brokers — topic and partition assignments, and controller status
+- View topics — partition count, replication status, and custom configuration
+- Browse messages — JSON, plain text and Avro encoding
+- View consumer groups — per-partition parked offsets, combined and per-partition lag
+- Create new topics
+- View ACLs
+
 ### Deploy Kafdrop on K8s
 You can also install KafDrop on the Kubernetes cluster with the helm of the manifest file. Create a YAML file called kafdrop-deployment.yaml with the following content in it:
 
@@ -98,6 +106,10 @@ spec:
   type: NodePort #LoadBalancer
   
 ```
-
+By default, the topic creation, deletion and ACL are enabled via KafDrop. If you want to disable topic creation and topic deletion, add the following in the env section of the YAML file:
+```
+- name: CMD_ARGS
+  value: "--topic.deleteEnabled=false --topic.createEnabled=false"
+```
 
 May this is help for you who implement DevSecOps. 
