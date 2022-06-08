@@ -3,9 +3,13 @@ layout: post
 title: Deploy Kafdrop on Kubernetes
 ---
 
-When it comes to Kafka topic viewers and web UIs, the go-to open-source tool is Kafdrop. With 800K Docker pulls at the time of writing, there aren’t many Kafka tools that have enjoyed this level of adoption. And there’s a reason behind that: Kafdrop does an amazing job of filling the apparent gaps in the observability tooling of Kafka, solving problems that the community has been pointing out for too long.
+What is Kafka?
+Apache Kafka is an open-source platform. Kafka was originally developed by Linkedin and was later incubated as the Apache Project. It can process over 1 million messages per second.
 
-Kafdrop is an Apache 2.0 licensed project, like Apache Kafka itself. So it’s won’t cost you a penny. If you haven’t used it yet, you probably ought to. So let’s take a deeper look.
+Need for Kafdrop:
+Kafka is an amazing platform for processing a huge number of messages very quickly. However, Kafka has one disadvantage that it does not come with an inbuilt User Interface where the users can see the information related to Kafka.
+
+Kafdrop helps us in solving this problem. It gives us a simple, lightweight, and easy-to-use User Interface where one can not only see the required information but can also create and delete Kafka topics.
 
 What Can It Do?
 - View Kafka brokers — topic and partition assignments, and controller status
@@ -76,13 +80,11 @@ spec:
             - name: KAFKA_BROKERCONNECT
               value: "your kafka broker IP and Port"
             - name: KAFKA_PROPERTIES
-              value: "your kafka config.properties decode to base64"
+              value: "your kafka config.properties encode to base64"
             - name: KAFKA_TRUSTSTORE
-              value: "your kafka truestore"
+              value: "your kafka truestore encode to base64"
             - name: KAFKA_KEYSTORE
-              value: "your kafka keystore"
-            - name: CMD_ARGS
-              value: "--topic.deleteEnabled=false --topic.createEnabled=false"
+              value: "your kafka keystore encode to base64"
       restartPolicy: Always
 ```
 #### kafdrop-service.yaml
@@ -112,4 +114,4 @@ By default, the topic creation, deletion and ACL are enabled via KafDrop. If you
   value: "--topic.deleteEnabled=false --topic.createEnabled=false"
 ```
 
-May this is help for you who implement DevSecOps. 
+May this is help for you who implement Kafka. 
