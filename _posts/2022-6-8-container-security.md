@@ -15,8 +15,10 @@ To enabled access or connection logging in all sidecar and gateway. We can creat
 
 ### Container security tools
 - [Dive](https://github.com/wagoodman/dive)
-Dive: A tool for exploring a docker image, layer contents, and discovering ways to shrink the size of your Docker/OCI image.
+A tool for exploring a docker image, layer contents, and discovering ways to shrink the size of your Docker/OCI image.
 - [Dockle](https://github.com/goodwithtech/dockle)
-Dockle: Container Image Linter for Security, Helping build the Best-Practice Docker Image, Easy to start 
+Container Image Linter for Security, Helping build the Best-Practice Docker Image, Easy to start 
+- [Trivy](https://github.com/aquasecurity/trivy)
+is a simple and comprehensive vulnerability/misconfiguration/secret scanner for containers and other artifacts. Trivy detects vulnerabilities of OS packages (Alpine, RHEL, CentOS, etc.) and language-specific packages (Bundler, Composer, npm, yarn, etc.). In addition, Trivy scans Infrastructure as Code (IaC) files such as Terraform and Kubernetes, to detect potential configuration issues that expose your deployments to the risk of attack. 
 
-May this is help for you who implement Istio and struggling to troubleshoot networking problem in the application. 
+May this is help for you who implement DevSecOps. 
