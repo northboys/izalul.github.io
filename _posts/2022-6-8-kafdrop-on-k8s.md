@@ -112,7 +112,7 @@ spec:
 
 By default, the topic creation, deletion and ACL are enabled via KafDrop. If you want to disable topic creation and topic deletion, add the following in the env section of the YAML file:
 
-{% endhighlight shell %}
+{% highlight shell %}
 - name: CMD_ARGS
   value: "--topic.deleteEnabled=false --topic.createEnabled=false"
 {% endhighlight %}
