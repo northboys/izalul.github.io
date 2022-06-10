@@ -23,7 +23,8 @@ What Can It Do?
 You can also install KafDrop on the Kubernetes cluster with the helm of the manifest file. Create a YAML file called kafdrop-deployment.yaml with the following content in it:
 
 #### kafdrop-deployment.yaml
-```
+
+{% highlight shell %}
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -86,10 +87,10 @@ spec:
             - name: KAFKA_KEYSTORE
               value: "your kafka keystore encode to base64"
       restartPolicy: Always
-```
+{% endhighlight %}
 #### kafdrop-service.yaml
 
-```
+{% highlight shell %}
 apiVersion: v1
 kind: Service
 metadata:
@@ -106,12 +107,12 @@ spec:
   selector:
     app: kafka-kafdrop
   type: NodePort #LoadBalancer
-  
-```
+{% endhighlight %}
+
 By default, the topic creation, deletion and ACL are enabled via KafDrop. If you want to disable topic creation and topic deletion, add the following in the env section of the YAML file:
-```
+{% endhighlight shell %}
 - name: CMD_ARGS
   value: "--topic.deleteEnabled=false --topic.createEnabled=false"
-```
+{% endhighlight %}
 
 May this is help for you who implement Kafka. 
