@@ -6,6 +6,7 @@ title: Monitoring and manage kafka multi cluster
 Kafka user interface
 UI for Apache Kafka is a simple tool that makes your data flows observable, helps find and troubleshoot issues faster and deliver optimal performance. Its lightweight dashboard makes it easy to track key metrics of your Kafka clusters - Brokers, Topics, Partitions, Production, and Consumption.
 
+
 ### 1.1. Feature
 Feature:
 - Multi-Cluster Management — monitor and manage all your clusters in one place
@@ -17,6 +18,7 @@ Feature:
 - Dynamic Topic Configuration — create and configure new topics with dynamic configuration
 - Configurable Authentification — secure your installation with optional Github/Gitlab/Google OAuth 2.0
 
+https://github.com/provectus/kafka-ui
 
 ### Creating kafka ui
 #### MM2 Docker
