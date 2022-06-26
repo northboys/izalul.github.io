@@ -9,7 +9,6 @@ Kafka cluster on docker using docker compose
 Feature:
 - 3 Broker dan 3 Zookeeper
 - Authentication, PLAINTEXT, SASL_PLAINTEXT, SSL
-- Mirroring data antar cluster
 
 
 ### Creating a cluster
