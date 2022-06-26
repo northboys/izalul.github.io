@@ -70,13 +70,13 @@ spec:
             - name: KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS
               value: "192.168.1.20:9092"
             - name: KAFKA_CLUSTERS_0_ZOOKEEPER
-              value: "10.40.70.142:22181"
+              value: "192.168.1.20:2181"
             - name: KAFKA_CLUSTERS_1_NAME
               value: "(BACKUP) kafka-cluster"
             - name: KAFKA_CLUSTERS_1_BOOTSTRAPSERVERS
               value: "192.168.1.30:9092"
             - name: KAFKA_CLUSTERS_1_ZOOKEEPER
-              value: "10.52.4.207:2181"
+              value: "192.168.1.30:2181"
       restartPolicy: Always
 
 ---
