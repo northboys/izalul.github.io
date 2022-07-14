@@ -20,4 +20,4 @@ IT Infrastructure Engineer @ Mitra Informatika. Very interested in Cloud-Native,
 
 ### Contact me
 
-[izalulhaq@hotmail.com](mailto:izalulhaq@hotmail.com)
+[izalulhaq@izalul.com](mailto:izalulhaq@izalul.com)
